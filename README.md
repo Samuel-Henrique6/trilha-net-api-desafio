@@ -34,7 +34,7 @@ Foi implementado os métodos conforme a seguir:
 | GET    | /Tarefa/ObterPorData       | data      | N/A           |
 | GET    | /Tarefa/ObterPorStatus     | status    | N/A           |
 | POST   | /Tarefa                    | N/A       | Schema Tarefa |
-| PATCH  | /Tarefa/Toggle-Status/{id} | id        | N/A           |
+| PATCH  | /Tarefa/{id}/toggle-status | id        | N/A           |
 
 Esse é o schema (model) de Tarefa, utilizado para passar para os métodos que exigirem
 
