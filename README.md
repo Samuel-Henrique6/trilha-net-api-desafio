@@ -20,7 +20,7 @@ Foi implementado os métodos conforme a seguir:
 
 **Swagger**
 
-![Métodos Swagger](Swagger.png)
+![Métodos Swagger](https://raw.githubusercontent.com/Samuel-Henrique6/trilha-net-api-desafio/main/swagger.png)
 
 **Endpoints**
 
