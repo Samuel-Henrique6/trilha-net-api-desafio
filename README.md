@@ -1,58 +1,57 @@
 # DIO - Trilha .NET - API e Entity Framework
+
 www.dio.me
 
 ## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de API e Entity Framework, da trilha .NET da DIO.
+
+Foi realizado um projeto de tarefa, onde parte do código já estava implementado, mas o código estava incompleto. Eu completei o código, seguindo as regras do desafio, e você poderá conferir o resultado final no repositório.
 
 ## Contexto
-Você precisa construir um sistema gerenciador de tarefas, onde você poderá cadastrar uma lista de tarefas que permitirá organizar melhor a sua rotina.
 
-Essa lista de tarefas precisa ter um CRUD, ou seja, deverá permitir a você obter os registros, criar, salvar e deletar esses registros.
+Foi construido um sistema gerenciador de tarefas simples, onde é possível cadastrar, editar, deletar, consultar tarefas e alterar o status das tarefas.
 
-A sua aplicação deverá ser do tipo Web API ou MVC, fique a vontade para implementar a solução que achar mais adequado.
+Essa lista de tarefas tem um CRUD, ou seja, permiti a você obter os registros, criar, salvar e deletar esses registros.
 
-A sua classe principal, a classe de tarefa, deve ser a seguinte:
+É uma aplicação do tipo Web API, utilizando o Entity Framework para manipulação do banco de dados.
 
-![Diagrama da classe Tarefa](diagrama.png)
+## Métodos Implementados
 
-Não se esqueça de gerar a sua migration para atualização no banco de dados.
-
-## Métodos esperados
-É esperado que você crie o seus métodos conforme a seguir:
-
+Foi implementado os métodos conforme a seguir:
 
 **Swagger**
 
-
-![Métodos Swagger](swagger.png)
-
+![Métodos Swagger](Swagger.png)
 
 **Endpoints**
 
-
-| Verbo  | Endpoint                | Parâmetro | Body          |
-|--------|-------------------------|-----------|---------------|
-| GET    | /Tarefa/{id}            | id        | N/A           |
-| PUT    | /Tarefa/{id}            | id        | Schema Tarefa |
-| DELETE | /Tarefa/{id}            | id        | N/A           |
-| GET    | /Tarefa/ObterTodos      | N/A       | N/A           |
-| GET    | /Tarefa/ObterPorTitulo  | titulo    | N/A           |
-| GET    | /Tarefa/ObterPorData    | data      | N/A           |
-| GET    | /Tarefa/ObterPorStatus  | status    | N/A           |
-| POST   | /Tarefa                 | N/A       | Schema Tarefa |
+| Verbo  | Endpoint                   | Parâmetro | Body          |
+| ------ | -------------------------- | --------- | ------------- |
+| GET    | /Tarefa/{id}               | id        | N/A           |
+| PUT    | /Tarefa/{id}               | id        | Schema Tarefa |
+| DELETE | /Tarefa/{id}               | id        | N/A           |
+| GET    | /Tarefa/ObterTodos         | N/A       | N/A           |
+| GET    | /Tarefa/ObterPorTitulo     | titulo    | N/A           |
+| GET    | /Tarefa/ObterPorData       | data      | N/A           |
+| GET    | /Tarefa/ObterPorStatus     | status    | N/A           |
+| POST   | /Tarefa                    | N/A       | Schema Tarefa |
+| PATCH  | /Tarefa/Toggle-Status/{id} | id        | N/A           |
 
 Esse é o schema (model) de Tarefa, utilizado para passar para os métodos que exigirem
 
 ```json
 {
-  "id": 0,
-  "titulo": "string",
-  "descricao": "string",
-  "data": "2022-06-08T01:31:07.056Z",
-  "status": "Pendente"
+    "id": 0,
+    "titulo": "string",
+    "descricao": "string",
+    "data": "2022-06-08T01:31:07.056Z",
+    "status": "Pendente"
 }
 ```
 
+## Tecnologias Utilizadas
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+-   C#
+-   .NET 10.0
+-   Entity Framework Core
+-   SQL Server
+-   Swagger
